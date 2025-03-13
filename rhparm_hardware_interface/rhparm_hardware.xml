@@ -1,0 +1,9 @@
+<library path="rhparm_hardware_interface">
+  <class name="rhparm_hardware/RHPArmSystemHardware"
+         type="rhparm_hardware::RHPArmSystemHardware"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      ROS2 control for RHPArm.
+    </description>
+  </class>
+</library>

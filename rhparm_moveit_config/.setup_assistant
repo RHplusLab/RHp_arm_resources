@@ -1,0 +1,19 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: rhparm_description
+    relative_path: urdf/rhparm.xacro
+  srdf:
+    relative_path: config/rhparm.srdf
+  package_settings:
+    author_name: chanhuirobot
+    author_email: chanhui.robot@gmail.com
+    generated_timestamp: 1708416323
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
