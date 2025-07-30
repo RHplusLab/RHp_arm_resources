@@ -222,6 +222,8 @@ namespace rhparm
 
 			// 이제 angle을 거리(m)로 바꾸자
 			position = std::sqrt(B * B - (A * std::cos(angle) - C) * (A * std::cos(angle) - C)) + A * std::sin(angle) - std::sqrt(B * B - (A - C) * (A - C)) + D;
+
+			if(position < 0) position = 0.0; // 각도가 음수인 경우 0으로 설정
 		}
 		else
 		{

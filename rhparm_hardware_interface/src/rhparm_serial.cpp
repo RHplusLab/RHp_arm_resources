@@ -125,7 +125,7 @@ namespace rhparm
 			pos = pos + 6;
 		}
 		else if(id == 3){
-			pos = pos - 5;
+			pos = pos - 3;
 		}
 		else if(id == 5){
 			pos = pos - 3;
