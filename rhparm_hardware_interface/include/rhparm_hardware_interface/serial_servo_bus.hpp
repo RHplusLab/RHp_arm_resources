@@ -1,17 +1,13 @@
-
 #ifndef SERIAL_SERVO_BUS__H
 #define SERIAL_SERVO_BUS__H
 
 #include <cstdint>
+#include <vector>
+#include <map>
 
-bool LobotSerialServoMove(int fd, uint8_t id, int16_t position, uint16_t time);
-bool LobotSerialServoStopMove(int fd, uint8_t id);
-bool LobotSerialServoSetID(int fd, uint8_t oldID, uint8_t newID);
-bool LobotSerialServoSetMode(int fd, uint8_t id, uint8_t Mode, int16_t Speed);
-bool LobotSerialServoLoad(int fd, uint8_t id);
-bool LobotSerialServoUnload(int fd, uint8_t id);
-
-bool LobotSerialServoReadPosition(int fd, uint8_t id, uint16_t &position);
-bool LobotSerialServoReadVin(int fd, uint8_t id, uint16_t &vin);
+bool BusController_ServoMove(int fd, uint8_t id, uint16_t position, uint16_t time);
+bool BusController_ServoUnload(int fd, const uint8_t ids[], int count);
+bool BusController_ReadPosition(int fd, uint8_t id, uint16_t &position);
+bool BusController_ReadMultiplePositions(int fd, const std::vector<uint8_t>& ids, std::map<uint8_t, uint16_t>& positions);
 
 #endif // SERIAL_SERVO_BUS__H

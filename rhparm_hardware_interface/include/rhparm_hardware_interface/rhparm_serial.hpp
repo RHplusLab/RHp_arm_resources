@@ -1,9 +1,9 @@
-
 #ifndef RHPARM_SERIAL__H
 #define RHPARM_SERIAL__H
 #include <hidapi/hidapi.h>
 #include <sstream>
 #include <vector>
+#include <map>
 
 #include "rhparm_drvr.hpp"
 
@@ -19,6 +19,7 @@ namespace rhparm
 			void close() override;
 
 			bool getJointPosition(int id, uint16_t &pos) override;
+			bool getMultipleJointPositions(const std::vector<uint8_t>& ids, std::map<uint8_t, uint16_t>& positions) override;
 			bool setJointPosition(int id, uint16_t pos, uint16_t time) override;
 			bool setManualModeAll(bool enable, int count) override;
 
