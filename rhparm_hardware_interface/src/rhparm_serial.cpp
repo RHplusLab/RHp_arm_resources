@@ -122,10 +122,10 @@ namespace rhparm
 
 		// pos에 조작을 가한다 2번 조인트 보정 +7 / 3번 조인트 보정 -7 / 5번 조인트 보정 -3
 		if(id == 2){
-			pos = pos + 7;
+			pos = pos + 6;
 		}
 		else if(id == 3){
-			pos = pos - 7;
+			pos = pos - 5;
 		}
 		else if(id == 5){
 			pos = pos - 3;
